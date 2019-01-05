@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/tabBar/dateDir",
+    "pages/tabBar/nameDir",
+    "pages/tabBar/mineDir",
+    "pages/dateIntro/dateIntro",
+    "pages/consilia/consilia",
+    "pages/nameIntro/nameIntro"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#2c2c2c",
+    "navigationBarTitleText": "中一学堂",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#41b3f9",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/dateDir",
+        "iconPath": "image/icon_tab_date_dir.png",
+        "selectedIconPath": "image/icon_tab_date_dir_HL.png",
+        "text": "按日期"
+      },
+      {
+        "pagePath": "pages/tabBar/nameDir",
+        "iconPath": "image/icon_tab_name_dir.png",
+        "selectedIconPath": "image/icon_tab_name_dir_HL.png",
+        "text": "按病人"
+      }
+    ]
+  }
+}

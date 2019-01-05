@@ -1,0 +1,19 @@
+@import "/pages/common/wxss/common.wxss";
+
+.filter-hd {
+  display: flex;    
+  justify-content: flex-end;
+  align-items: center;
+  margin: 25rpx 50rpx 0;
+}
+
+.filter-image {
+  width: 45rpx;
+  height: 45rpx;
+  margin: 0 15rpx 0 0;
+}
+
+.filter-text {
+  color: #707070;
+  font-size: 38rpx;
+}
