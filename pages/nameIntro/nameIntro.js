@@ -15,7 +15,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaNameIntro", reqJson, "正在加载...", that.onGetConsiliaNameIntroSuccess, that.onGetConsiliaNameIntroFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaNameIntro", reqJson, "正在加载...", that.onGetConsiliaNameIntroSuccess, that.onGetConsiliaNameIntroFail);
   },
   /**
    * 获取数据成功事件

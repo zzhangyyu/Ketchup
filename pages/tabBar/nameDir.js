@@ -17,7 +17,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaNameDir", reqJson, "正在加载...", that.onGetConsiliaNameDirSuccess, that.onGetConsiliaNameDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaNameDir", reqJson, "正在加载...", that.onGetConsiliaNameDirSuccess, that.onGetConsiliaNameDirFail);
 
   },
   /**
@@ -35,7 +35,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaNameDir", reqJson, "正在加载...", that.onGetConsiliaNameDirSuccess, that.onGetConsiliaNameDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaNameDir", reqJson, "正在加载...", that.onGetConsiliaNameDirSuccess, that.onGetConsiliaNameDirFail);
     that.clear();
   },
   /**
@@ -62,7 +62,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaNameDir", reqJson, "正在加载...", that.onLoadMoreConsiliaNameDirSuccess, that.onLoadMoreConsiliaNameDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaNameDir", reqJson, "正在加载...", that.onLoadMoreConsiliaNameDirSuccess, that.onLoadMoreConsiliaNameDirFail);
     wx.stopPullDownRefresh();
   },
   /**
@@ -177,7 +177,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaNameDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaNameDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
   },
   /**
    * 搜索框文字变化监听事件

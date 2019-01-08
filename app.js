@@ -40,6 +40,7 @@ App({
     recordPerPage:'10',
     os:'WeiXin',
     phone:'15311496135',
-    version:'V1.0'
+    version:'V1.0',
+    baseUrl:'https://www.rzit.top/raisins/'
   }
 })

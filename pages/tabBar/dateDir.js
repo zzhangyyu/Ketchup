@@ -20,7 +20,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaDateDir", reqJson, "正在加载...", that.onGetConsiliaDateDirSuccess, that.onGetConsiliaDateDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl + "patient/getConsiliaDateDir", reqJson, "正在加载...", that.onGetConsiliaDateDirSuccess, that.onGetConsiliaDateDirFail);
   },
   /**
    * 下拉刷新
@@ -44,7 +44,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaDateDir", reqJson, "正在加载...", that.onGetConsiliaDateDirSuccess, that.onGetConsiliaDateDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl + "patient/getConsiliaDateDir", reqJson, "正在加载...", that.onGetConsiliaDateDirSuccess, that.onGetConsiliaDateDirFail);
   },
   /**
    * 上拉加载
@@ -72,7 +72,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaDateDir", reqJson, "正在加载...", that.onLoadMoreConsiliaDateDirSuccess, that.onLoadMoreConsiliaDateDirFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaDateDir", reqJson, "正在加载...", that.onLoadMoreConsiliaDateDirSuccess, that.onLoadMoreConsiliaDateDirFail);
     wx.stopPullDownRefresh();
   },
   //  点击日期组件确定事件  
@@ -92,7 +92,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson("https://www.rzit.top/grape/patient/getConsiliaDateDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
+    networkUtil.postJson(getApp().globalData.baseUrl +"patient/getConsiliaDateDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
   },
   /**
    * 获取数据成功事件
@@ -126,9 +126,9 @@ Page({
     wx.stopPullDownRefresh();
   },
   /**
-  * 获取数据成功事件
-  */
-  onSearchSuccess: function (data, requestCode) {
+   * 获取数据成功事件
+   */
+  onSearchSuccess: function(data, requestCode) {
     var that = this;
     var internetData = data.content;
     that.setData({
@@ -148,7 +148,7 @@ Page({
   /**
    * 获取数据失败事件
    */
-  onSearchFail: function (data, requestCode) {
+  onSearchFail: function(data, requestCode) {
     var that = this;
     that.setData({
       patientdateList: data.content

@@ -2,7 +2,7 @@
   "pages":[
     "pages/tabBar/dateDir",
     "pages/tabBar/nameDir",
-    "pages/tabBar/mineDir",
+    "pages/tabBar/illnessDir",
     "pages/dateIntro/dateIntro",
     "pages/consilia/consilia",
     "pages/nameIntro/nameIntro"
@@ -15,7 +15,7 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#41b3f9",
+    "selectedColor": "#d4237a",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
@@ -29,7 +29,19 @@
         "pagePath": "pages/tabBar/nameDir",
         "iconPath": "image/icon_tab_name_dir.png",
         "selectedIconPath": "image/icon_tab_name_dir_HL.png",
-        "text": "按病人"
+        "text": "按姓名"
+      },
+      {
+        "pagePath": "pages/tabBar/illnessDir",
+        "iconPath": "image/icon_tab_illness_dir.png",
+        "selectedIconPath": "image/icon_tab_illness_dir_HL.png",
+        "text": "按疾病"
+      },
+      {
+        "pagePath": "pages/tabBar/illnessDir",
+        "iconPath": "image/icon_tab_illness_dir.png",
+        "selectedIconPath": "image/icon_tab_illness_dir_HL.png",
+        "text": "按方剂"
       }
     ]
   }
