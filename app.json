@@ -3,14 +3,15 @@
     "pages/tabBar/dateDir",
     "pages/tabBar/nameDir",
     "pages/tabBar/illnessDir",
+    "pages/tabBar/prescriptionDir",
+    "pages/nameIntro/nameIntro",
     "pages/dateIntro/dateIntro",
-    "pages/consilia/consilia",
-    "pages/nameIntro/nameIntro"
+    "pages/consilia/consilia"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#2c2c2c",
-    "navigationBarTitleText": "中一学堂",
+    "navigationBarTitleText": "徐书临证宝典",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
@@ -38,9 +39,9 @@
         "text": "按疾病"
       },
       {
-        "pagePath": "pages/tabBar/illnessDir",
-        "iconPath": "image/icon_tab_illness_dir.png",
-        "selectedIconPath": "image/icon_tab_illness_dir_HL.png",
+        "pagePath": "pages/tabBar/prescriptionDir",
+        "iconPath": "image/icon_tab_prescription_dir.png",
+        "selectedIconPath": "image/icon_tab_prescription_dir_HL.png",
         "text": "按方剂"
       }
     ]

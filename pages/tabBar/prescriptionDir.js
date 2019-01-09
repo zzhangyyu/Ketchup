@@ -2,7 +2,7 @@ var networkUtil = require("../common/js/network.js");
 Page({
   data: {
     pageIdx: 1,
-    illnessList: [],
+    prescriptionList: [],
     isLastPage: false,
     clearIconShow: false
   },
@@ -23,7 +23,7 @@ Page({
     that.setData({
       pageIdx: 1,
       isLastPage: true,
-      illnessList: internetData
+      prescriptionList: internetData
     });
   },
   /**
@@ -32,7 +32,7 @@ Page({
   onSearchFail: function (data, requestCode) {
     var that = this;
     that.setData({
-      illnessList: data.content
+      prescriptionList: data.content
     });
   },
   /**
@@ -40,8 +40,8 @@ Page({
    */
   search: function (e) {
     var that = this;
-    var illnessLike = that.data.searchValue;
-    if (illnessLike == null || illnessLike.trim() == '') {
+    var prescriptionLike = that.data.searchValue;
+    if (prescriptionLike == null || prescriptionLike.trim() == '') {
       that.clear();
       wx.showToast({
         title: '请输入查询内容',
@@ -53,7 +53,7 @@ Page({
     }
     var reqJson = {
       "content": {
-        "illnessLike": illnessLike,
+        "prescriptionLike": prescriptionLike,
         "pageIdx": "1",
         "recordPerPage": getApp().globalData.recordPerPage
       },
@@ -61,7 +61,7 @@ Page({
       "phone": getApp().globalData.phone,
       "version": getApp().globalData.version
     };
-    networkUtil.postJson(getApp().globalData.baseUrl + "patient/getConsiliaIllnessDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
+    networkUtil.postJson(getApp().globalData.baseUrl + "patient/getConsiliaPrescriptionDir", reqJson, "正在加载...", that.onSearchSuccess, that.onSearchFail);
   },
   /**
    * 搜索框文字变化监听事件

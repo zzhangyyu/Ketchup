@@ -3,7 +3,7 @@
     <view class='search'>
       <view class="search_arr">
         <icon class="search-icon" size='18' type='search'></icon>
-        <input placeholder="请输入病名关键字" value="{{searchValue}}" bindinput='searchValueInput' bindconfirm="search"/>
+        <input placeholder="请输入方剂名关键字" value="{{searchValue}}" bindinput='searchValueInput' bindconfirm="search"/>
         <icon wx:if="{{clearIconShow}}" type="clear" size="15" bindtap='clear'/>
       </view>
       <view class='search-text' bindtap="search">搜索</view>
@@ -12,7 +12,7 @@
 
   <view class="index-bd">
     <view class="kind-list">
-      <block wx:for-items="{{illnessList}}" wx:key="{{item.visitingDate}}">
+      <block wx:for-items="{{prescriptionList}}" wx:key="{{item.visitingDate}}">
         <navigator url="/pages/consilia/consilia?patientConditionId={{item.patientConditionId}}">
           <view class="common-list-item">
             <view class="common-list-item-left">
@@ -32,8 +32,8 @@
                 <view class="common-list-text-var">{{item.visitingDate}}</view>
               </view>
               <view class="common-list-item-right-child">
-                <view class="common-list-text-const">疾病名：</view>
-                <view class="common-list-text-var">{{item.illness}}</view>
+                <view class="common-list-text-const">方剂名：</view>
+                <view class="common-list-text-var">{{item.prescriptionName}}</view>
               </view>
             </view>           
           </view>
